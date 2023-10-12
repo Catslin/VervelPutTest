@@ -8,12 +8,12 @@ app.use(express.json());
 app.use(express.static("public"));
 app.set("view engine", "ejs");
 
-app.get('/',(req,res) => {
-    res.send('homePage')
-})
-app.get('/test',(req,res) => {
-    res.render("index.ejs")
-})
+app.get("/", (req, res) => {
+  res.send("homePage");
+});
+app.get("/test", function (req, res) {
+  res.sendFile(__dirname + "/public/index.html");
+});
 
 // Routes
 app.use("/home", home);
