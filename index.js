@@ -9,6 +9,9 @@ app.use(express.json());
 app.get('/',(req,res) => {
     res.send('homePage')
 })
+app.get('/test',(req,res) => {
+    res.send('TestPage')
+})
 
 // Routes
 app.use("/home", home);
