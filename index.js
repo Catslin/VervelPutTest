@@ -12,7 +12,7 @@ app.get("/", (req, res) => {
   res.send("homePage");
 });
 app.get("/test", function (req, res) {
-  res.sendFile("index.html");
+  res.sendFile(__dirname + "/public/index.html");
 });
 
 // Routes
