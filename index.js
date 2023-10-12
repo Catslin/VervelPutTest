@@ -5,12 +5,13 @@ const home = require("./routes/home");
 // Middlewares
 const app = express();
 app.use(express.json());
+app.set("view engine", "ejs");
 
 app.get('/',(req,res) => {
     res.send('homePage')
 })
 app.get('/test',(req,res) => {
-    res.send('TestPage')
+    res.render("index.ejs")
 })
 
 // Routes
